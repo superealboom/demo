@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>org.example</groupId>
+  <artifactId>demo</artifactId>
+  <version>1.0-SNAPSHOT</version>
+  <modules>
+    <module>environmentPostProcessor</module>
+    <module>java-basics</module>
+    <module>kafka-consumer</module>
+    <module>kafka-producer</module>
+    <module>cache-ehcache</module>
+    <module>myBatisPlus</module>
+    <module>jdbc</module>
+    <module>file-stream</module>
+    <module>zookeeper</module>
+    <module>redis</module>
+    <module>mail</module>
+    <module>loadBalance</module>
+    <module>hutool</module>
+  </modules>
+  <packaging>pom</packaging>
+
+  <!-- 统一管理jar包版本 -->
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <maven.compiler.source>1.8</maven.compiler.source>
+    <maven.compiler.target>1.8</maven.compiler.target>
+    <boot.version>2.2.2.RELEASE</boot.version>
+    <junit.version>4.12</junit.version>
+    <lombok.version>1.16.18</lombok.version>
+    <common-lang3.version>3.9</common-lang3.version>
+  </properties>
+
+  <!-- 1、只是声明依赖，并不实际引入，子项目按需声明使用的依赖 -->
+  <!-- 2、子项目可以继承父项目的 version 和 scope -->
+  <!-- 3、子项目若指定了 version 和 scope，以子项目为准 -->
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-dependencies</artifactId>
+        <version>${boot.version}</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+      <dependency>
+        <groupId>junit</groupId>
+        <artifactId>junit</artifactId>
+        <version>${junit.version}</version>
+      </dependency>
+      <dependency>
+        <groupId>org.projectlombok</groupId>
+        <artifactId>lombok</artifactId>
+        <version>${lombok.version}</version>
+        <optional>true</optional>
+      </dependency>
+      <dependency>
+        <groupId>org.apache.commons</groupId>
+        <artifactId>commons-lang3</artifactId>
+        <version>${common-lang3.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-maven-plugin</artifactId>
+        <configuration>
+          <addResources>true</addResources>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+
+<!--   测试 -->
+</project>
