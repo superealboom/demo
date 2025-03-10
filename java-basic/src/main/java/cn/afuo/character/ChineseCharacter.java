@@ -1,7 +1,7 @@
 package cn.afuo.character;
 
 /**
- * 汉字
+ * 判断字符是否为汉字
  */
 public class ChineseCharacter {
 

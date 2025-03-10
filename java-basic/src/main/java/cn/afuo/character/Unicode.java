@@ -1,6 +1,9 @@
 package cn.afuo.character;
 
 
+/**
+ * Unicode 取值
+ */
 public class Unicode {
 
     public static void main(String[] args) {

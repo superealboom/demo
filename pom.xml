@@ -212,4 +212,25 @@
     </plugins>
   </build>
 
+  <!-- 定义了Maven依赖仓库 -->
+  <repositories>
+    <repository>
+      <id>aliyun-repos</id>
+      <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <!-- 定义了Maven插件仓库 -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>aliyun-plugin</id>
+      <url>https://maven.aliyun.com/nexus/content/groups/public/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </pluginRepository>
+  </pluginRepositories>
+
 </project>
