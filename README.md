@@ -69,3 +69,7 @@
 7. JackSon工具包。
 
    `cn.afuo.webtool.util.JsonUtil`
+
+8. Aspect 注解下各个注解的执行顺序 doBefore、doAfter、doAfterReturning、doAfterThrowing、around。
+
+   `cn.afuo.webtool.aspect.GameAspect`
