@@ -4,6 +4,8 @@ package cn.afuo.webtool.business.controller;
 import cn.afuo.webtool.annotation.FunctionLog;
 import cn.afuo.webtool.annotation.NoRepeatSubmit;
 import cn.afuo.webtool.domain.Result;
+import cn.afuo.webtool.enums.ResultEnum;
+import cn.afuo.webtool.exception.WebToolException;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,4 +49,14 @@ public class DemoController {
     }
 
 
+    /**
+     * 自定义异常
+     */
+    @GetMapping("exception")
+    public Result<?> exception(Integer exceptionCode) {
+        if (ResultEnum.FAIL.getCode() == exceptionCode) {
+            throw new WebToolException("测试自定义异常");
+        }
+        return Result.success();
+    }
 }

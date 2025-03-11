@@ -73,3 +73,9 @@
 8. Aspect 注解下各个注解的执行顺序 doBefore、doAfter、doAfterReturning、doAfterThrowing、around。
 
    `cn.afuo.webtool.aspect.GameAspect`
+
+9. 自定义异常和全局异常处理。
+
+   `cn.afuo.webtool.exception.WebToolException`
+
+   `cn.afuo.webtool.exception.GlobalExceptionHandler`
