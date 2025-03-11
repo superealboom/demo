@@ -1,4 +1,4 @@
-package cn.afuo.character;
+package cn.afuo.javabasic.character;
 
 
 /**

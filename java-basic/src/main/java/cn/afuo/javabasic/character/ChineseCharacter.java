@@ -1,4 +1,4 @@
-package cn.afuo.character;
+package cn.afuo.javabasic.character;
 
 /**
  * 判断字符是否为汉字
@@ -18,10 +18,7 @@ public class ChineseCharacter {
      * 基本汉字的Unicode - CJK统一表意文字 - 无法匹配扩展汉字
      */
     private static boolean isChineseByRegular(String strName) {
-        if (strName.matches("^[\\u4e00-\\u9fa5]+$")) {
-            return true;
-        }
-        return false;
+        return strName.matches("^[\\u4e00-\\u9fa5]+$");
     }
 
 
@@ -30,10 +27,7 @@ public class ChineseCharacter {
      * 匹配所有汉字字符，包括基本汉字和扩展汉字
      */
     private static boolean isChineseByExpand(String strName) {
-        if (strName.matches("^[\\p{Script=Han}]+$")) {
-            return true;
-        }
-        return false;
+        return strName.matches("^[\\p{Script=Han}]+$");
     }
 
 

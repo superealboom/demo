@@ -1,4 +1,4 @@
-package cn.afuo.number;
+package cn.afuo.javabasic.number;
 
 
 import java.math.BigInteger;
