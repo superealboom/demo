@@ -8,7 +8,7 @@ import java.util.Random;
 /**
  * 生成随机数
  */
-public class RandomNumber {
+public class RandomMain {
 
 
     public static void main(String[] args) {

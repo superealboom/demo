@@ -11,7 +11,7 @@
 
 ### 3. Double和BigDecimal比较
 
-`cn.afuo.javabasic.number.DoubleNumber`
+`cn.afuo.javabasic.number.DoubleCompareBigDecimal`
 
 ### 4. Lombok使用详情
 
@@ -32,6 +32,14 @@
 ### 8. 尝试 jdk8 特性 predicate 断言使用
 
 `cn.afuo.javabasic.predicate`
+
+### 9. GBK和UTF-8解码编码
+
+`cn.afuo.javabasic.character.Charset`
+
+### 10. Linux命令执行
+
+`cn.afuo.javabasic.command.CommandMain`
 
 ## web-tool
 

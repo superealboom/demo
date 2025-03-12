@@ -5,7 +5,7 @@ import java.math.BigDecimal;
 /**
  * double 类型
  */
-public class DoubleNumber {
+public class DoubleCompareBigDecimal {
 
 
     public static void main(String[] args) {
