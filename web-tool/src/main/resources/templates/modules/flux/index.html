@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transaction Count</title>
+</head>
+<body>
+<h1>Today's Datetime: <span id="transaction-count">未开始</span></h1>
+<script>
+    const eventSource = new EventSource('/webtool/flux/realtime');
+
+    eventSource.onmessage = function(event) {
+        console.log('event.data', event.data)
+        document.getElementById('transaction-count').innerText = event.data;
+    };
+
+    eventSource.onerror = function(error) {
+        console.error('EventSource error:', error);
+    };
+</script>
+</body>
+</html>
