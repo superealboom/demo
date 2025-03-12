@@ -1,5 +1,4 @@
-package cn.afuo.webtool.business.service;
-
+package cn.afuo.webtool.validation;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;

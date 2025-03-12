@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>验证码</title>
+    <script type='text/javascript' th:src="@{/js/jquery-3.7.1.min.js}"></script>
+    <script type='text/javascript' th:src="@{/bootstrap/js/bootstrap.min.js}"></script>
+    <script type='text/javascript' th:src="@{/modules/captcha/index.js}"></script>
+    <link rel="stylesheet" th:href="@{/bootstrap/css/bootstrap.min.css}">
+</head>
+
+<body class="bg-primary-subtle">
+<div class="container text-center">
+    <div class="row align-items-center">
+        <div class="col"></div>
+        <div class="col">
+            <div class="input-group mb-3" style="margin-top:20%">
+                <input id="captchaId" hidden="hidden" value=""/>
+                <img id="captchaImage" th:src="${captchaVO.captchaImage}" onclick="refreshCaptcha()" alt=""/>
+                <input type="text" style="border-color: #4d5154" id="captchaCode" class="form-control" placeholder="请输入验证码">
+                <button class="btn btn-success" type="button" onclick="checkCaptcha()">验证</button>
+            </div>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<!-- 提示框 -->
+<div class="modal fade" id="messageModal" tabindex="-1" aria-labelledby="messageModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="messageModalLabel">上传结果</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" id="messageModalBody">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script th:inline="javascript">
+    const PATH = [[${#httpServletRequest.getContextPath()}]]
+    const captchaId = [[${captchaVO.captchaId}]]
+    console.log(captchaId)
+</script>
+</html>

@@ -42,11 +42,15 @@
 
 `cn.afuo.webtool.aspect.FunctionLogAspect`
 
+访问链接：`http://localhost:8010/webtool/aspect/hello?name=test&age=11&gender=1`
+
 ### 2. 自定义注解NoRepeatSubmitAspect，防止重复提交
 
 `cn.afuo.webtool.annotation.NoRepeatSubmitAspect` 
 
 `cn.afuo.webtool.aspect.NoRepeatSubmitAspect`
+
+访问链接：`http://localhost:8010/webtool/aspect/hello?name=test&age=11&gender=1`
 
 ### 3. 分布式锁 Redisson 引入
 
@@ -74,7 +78,9 @@
 
 ### 8. Aspect 注解下各个注解的执行顺序
 
-`cn.afuo.webtool.aspect.GameAspect`
+`cn.afuo.webtool.aspect.GameAspect` 
+
+访问链接：`http://localhost:8010/webtool/aspect/game`
 
 ### 9. 自定义异常和全局异常处理
 
@@ -82,11 +88,13 @@
 
 `cn.afuo.webtool.exception.GlobalExceptionHandler`
 
+访问链接：`http://localhost:8010/webtool/exception/code?exceptionCode=500`
+
 ### 10. 注解Validated使用：@Min、@Max 等
 
-`cn.afuo.webtool.business.service.ValidatedService`
+`cn.afuo.webtool.validation.ValidatedService`
 
-`cn.afuo.webtool.business.service.ValidatedServiceTest`
+`cn.afuo.webtool.validation.ValidatedServiceTest`
 
 ### 11. 多线程组件使用
 
@@ -100,3 +108,8 @@ ExecutorService、CompletableFuture、CountDownLatch、Future
 
 `cn.afuo.webtool.multithreading.MultithreadingTest`
 
+### 12. 验证码图片
+
+`cn.afuo.webtool.captcha`
+
+访问链接：`http://localhost:8010/webtool/captcha/index`

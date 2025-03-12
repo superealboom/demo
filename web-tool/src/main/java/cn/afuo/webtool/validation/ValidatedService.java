@@ -1,4 +1,4 @@
-package cn.afuo.webtool.business.service;
+package cn.afuo.webtool.validation;
 
 import org.springframework.stereotype.Component;
 import org.springframework.validation.annotation.Validated;

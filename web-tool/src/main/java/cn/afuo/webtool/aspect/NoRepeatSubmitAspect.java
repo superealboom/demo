@@ -47,7 +47,7 @@ public class NoRepeatSubmitAspect {
             }
         }
 
-        String lockName = RedisConstants.COMMON_LOCK_PREFIX + joinPoint.getTarget().getClass().getName() + "#" + targetMethod.getName() + inputDatas;
+        String lockName = RedisConstants.LOCK_NO_REPEAT_PREFIX + joinPoint.getTarget().getClass().getName() + "#" + targetMethod.getName() + inputDatas;
         log.info("lockName:{}", lockName);
 
         RLock lock = redissonClient.getLock(lockName);

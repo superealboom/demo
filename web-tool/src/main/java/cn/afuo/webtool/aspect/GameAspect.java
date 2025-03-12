@@ -22,7 +22,7 @@ public class GameAspect {
      * * Pointcut("execution(* add*(..))") 匹配所有名字以 add 开头的方法
      * * Pointcut("@annotation(com.example.annotation.MyCustomAnnotation)")
      */
-    @Pointcut("execution(public * cn.afuo.webtool.business.controller.DemoController.game(..))")
+    @Pointcut("execution(public * cn.afuo.webtool.aspect.AspectController.game(..))")
     public void game() {}
 
     @Before("game()")
