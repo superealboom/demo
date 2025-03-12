@@ -113,3 +113,5 @@ ExecutorService、CompletableFuture、CountDownLatch、Future
 `cn.afuo.webtool.captcha`
 
 访问链接：`http://localhost:8010/webtool/captcha/index`
+
+![image-20250312161729545](https://afuo-blog.oss-cn-beijing.aliyuncs.com/demo/web-tool/image-20250312161729545.png)
