@@ -1,10 +1,7 @@
 package cn.afuo.javabasic.file;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
+import java.io.*;
+import java.nio.charset.StandardCharsets;
 
 /**
  * 操作 txt
@@ -12,14 +9,35 @@ import java.util.List;
 public class TxtReader {
 
     public static void main(String[] args) {
-        List<String> orderNoList = new ArrayList<>();
-        String filePath = "/Users/tianci/Documents/文档-代码常用/test8.txt";
+        String filePath = "/Users/tianci/VsCodeProjects/gitconfig.txt";
+        getResult(filePath);
+        getResultByUTF8(filePath);
+    }
+
+
+
+    private static void getResult(String filePath) {
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
             String line;
             while ((line = br.readLine()) != null) {
-                orderNoList.add(line);
+                System.out.println(line);
             }
         } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+
+
+    private static void getResultByUTF8(String filePath) {
+        File file = new File(filePath);
+        try (BufferedReader reader = new BufferedReader(new InputStreamReader(
+                new FileInputStream(file), StandardCharsets.UTF_8))){
+            String line;
+            while((line = reader.readLine()) !=null) {
+                System.out.println(line);
+            }
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
