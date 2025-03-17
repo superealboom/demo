@@ -140,5 +140,7 @@ ExecutorService、CompletableFuture、CountDownLatch、Future
 
 访问链接：`http://localhost:8010/webtool/env/author`
 
+### 15. ehcache增删改查
 
+`cn.afuo.webtool.ehcache.EhCacheController`
 

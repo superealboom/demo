@@ -1,0 +1,53 @@
+<ehcache xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="http://ehcache.org/ehcache.xsd">
+    <!-- 这个是磁盘存储路径，当内存缓存满了的时候，就会往这里面放，
+     java.io.tmpdir/ehcache是操作系统缓存的临时目录，不同操作系统缓存目录不一样 -->
+    <!--<diskStore path="java.io.tmpdir/ehcache"/>-->
+
+    <!--
+    maxElementsInMemory:在内存中缓存的element的最大数目
+        0没有限制。若放入Cache中的元素超过这个数值，则有以下两种情况：
+        1>若 overflowToDisk=true，则会将Cache中多出的元素放入磁盘文件中。
+        2>若 overflowToDisk=false，则根据memoryStoreEvictionPolicy策略替换Cache中原有的元素。
+    maxEntriesLocalHeap:堆内存中最大缓存对象数，0为不限制
+    eternal:elements是否永久有效，如果为true，timeouts将被忽略，element将永不过期
+    timeToIdleSeconds:当缓存闲置n秒后销毁，当eternal为false时，这个属性才有效，0为不限制
+    timeToLiveSeconds:当缓存存活n秒后销毁，当eternal为false时，这个属性才有效，0为不限制
+    overflowToDisk:如果内存中数据超过内存限制，是否要缓存到磁盘上，默认为false - 废弃，用cache元素的子元素persistence来代替
+    diskSpoolBufferSizeMB:设置磁盘缓存的缓存区大小。默认是30MB
+    maxElementsOnDisk：硬盘最大缓存个数，0为不限制
+    diskExpiryThreadIntervalSeconds:磁盘缓存的清理线程运行间隔，默认是120秒
+    diskPersistent:是否在磁盘上持久化。指重启JVM后，数据是否有效，默认为false
+    clearOnFlush:内存数量最大时是否清除
+    memoryStoreEvictionPolicy:内存存储与释放策略，即达到 maxElementsInMemory 限制时，Ehcache会根据指定策略清理内存
+        共有三种策略
+        1>LRU（最近最少使用）
+        2>LFU（最常用的）
+        3>FIFO（先进先出）
+    statistics:是否收集统计信息。如果需要监控缓存使用情况，应该打开这个选项。默认为关闭（统计会影响性能）。设置statistics="true"开启统计
+    -->
+
+
+    <!--
+    defaultCache:ehcache的默认缓存策略，它不会为每个缓存提供“默认值”
+    它只是一种指定可以动态添加的缓存配置的方法 - 使用cacheManager.addCache（String cacheName）
+    -->
+    <defaultCache
+            maxElementsInMemory="100"
+            maxEntriesLocalHeap="100"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+    </defaultCache>
+    <cache name="ehCacheVO"
+           maxElementsInMemory="100"
+           maxEntriesLocalHeap="100"
+           eternal="false"
+           timeToIdleSeconds="120"
+           timeToLiveSeconds="120"
+           memoryStoreEvictionPolicy="LRU">
+        <persistence strategy="localTempSwap"/>
+    </cache>
+</ehcache>
