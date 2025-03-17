@@ -133,3 +133,12 @@ ExecutorService、CompletableFuture、CountDownLatch、Future
 `cn.afuo.webtool.flux.FluxController`
 
 访问链接：`http://localhost:8010/webtool/flux/index`
+
+### 14. env动态加载数据到application配置
+
+`cn.afuo.webtool.env.EnvController`
+
+访问链接：`http://localhost:8010/webtool/env/author`
+
+
+
