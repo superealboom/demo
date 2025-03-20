@@ -134,13 +134,19 @@ ExecutorService、CompletableFuture、CountDownLatch、Future
 
 访问链接：`http://localhost:8010/webtool/flux/index`
 
-### 14. env动态加载数据到application配置
+### 14. env 动态加载数据到application配置
 
 `cn.afuo.webtool.env.EnvController`
 
 访问链接：`http://localhost:8010/webtool/env/author`
 
-### 15. ehcache增删改查
+### 15. ehcache 增删改查
 
 `cn.afuo.webtool.ehcache.EhCacheController`
+
+### 16. zookeeper 工具类
+
+`cn.afuo.webtool.config.ZooKeeperConfig`
+
+`cn.afuo.webtool.util.ZkUtil`
 

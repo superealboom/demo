@@ -89,10 +89,15 @@
         </dependency>
 
         <!-- Ehcache缓存管理器 -->
-        <!-- Ehcache缓存管理器 -->
         <dependency>
             <groupId>net.sf.ehcache</groupId>
             <artifactId>ehcache</artifactId>
+        </dependency>
+
+        <!-- zookeeper -->
+        <dependency>
+            <groupId>org.apache.zookeeper</groupId>
+            <artifactId>zookeeper</artifactId>
         </dependency>
     </dependencies>
 </project>
