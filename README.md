@@ -148,5 +148,19 @@ ExecutorService、CompletableFuture、CountDownLatch、Future
 
 `cn.afuo.webtool.config.ZooKeeperConfig`
 
-`cn.afuo.webtool.util.ZkUtil`
+`cn.afuo.webtool.middleware.ZookeeperService`
+
+`cn.afuo.webtool.middleware.ZookeeperServiceTest`
+
+### 17. rocketMQ 生产消费
+
+`cn.afuo.webtool.config.RocketMQProducerConfig`
+
+`cn.afuo.webtool.middleware.RocketMQProducerService`
+
+`cn.afuo.webtool.middleware.RocketMQProducerServiceTest`
+
+`cn.afuo.webtool.middleware.RocketMQConsumerService`
+
+
 

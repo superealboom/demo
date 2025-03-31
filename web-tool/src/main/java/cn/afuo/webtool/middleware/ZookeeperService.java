@@ -1,4 +1,4 @@
-package cn.afuo.webtool.util;
+package cn.afuo.webtool.middleware;
 
 import lombok.extern.slf4j.Slf4j;
 import org.apache.zookeeper.CreateMode;
@@ -15,11 +15,11 @@ import java.nio.charset.StandardCharsets;
  */
 @Slf4j
 @Component
-public class ZkUtil {
+public class ZookeeperService {
 
     private final ZooKeeper zk;
 
-    public ZkUtil(ZooKeeper zk) {
+    public ZookeeperService(ZooKeeper zk) {
         this.zk = zk;
     }
 

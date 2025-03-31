@@ -27,6 +27,7 @@
     <redisson.version>3.12.5</redisson.version>
     <captcha.version>1.6.2</captcha.version>
     <zookeeper.version>3.8.4</zookeeper.version>
+    <rocketmq.version>5.3.1</rocketmq.version>
   </properties>
 
   <dependencyManagement>
@@ -146,6 +147,12 @@
         <version>${zookeeper.version}</version>
       </dependency>
 
+      <!-- rocketmq -->
+      <dependency>
+        <groupId>org.apache.rocketmq</groupId>
+        <artifactId>rocketmq-client</artifactId>
+        <version>${rocketmq.version}</version>
+      </dependency>
     </dependencies>
   </dependencyManagement>
 

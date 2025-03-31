@@ -1,29 +1,28 @@
-package cn.afuo.webtool.util;
+package cn.afuo.webtool.middleware;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-
 @SpringBootTest
-class ZkUtilTest {
+class ZookeeperServiceTest {
 
     @Autowired
-    private ZkUtil zkUtil;
+    private ZookeeperService zookeeperService;
 
     @Test
     public void createNode() throws Exception {
-        zkUtil.createNode("/test", "Hello, ZooKeeper!");
+        zookeeperService.createNode("/test", "Hello, ZooKeeper!");
     }
 
     @Test
     public void readNode() throws Exception {
-        zkUtil.readNode("/test");
+        zookeeperService.readNode("/test");
     }
 
     @Test
     public void deleteNode() throws Exception {
-        zkUtil.deleteNode("/test");
+        zookeeperService.deleteNode("/test");
     }
 
 

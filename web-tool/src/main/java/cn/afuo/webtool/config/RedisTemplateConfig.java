@@ -3,7 +3,6 @@ package cn.afuo.webtool.config;
 
 
 import cn.afuo.webtool.util.RedisUtil;
-import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.condition.ConditionalOnBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -15,7 +14,6 @@ import org.springframework.data.redis.serializer.StringRedisSerializer;
 import javax.annotation.Resource;
 
 
-@Slf4j
 @Configuration
 public class RedisTemplateConfig {
 
